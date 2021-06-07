@@ -1,0 +1,69 @@
+.offer {
+    margin: auto;
+    // position: relative;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Kozuka Gothic Pr6N";
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-stretch: ultra-condensed;
+}
+
+.offer--web {
+    display: none;
+}
+
+.offer--upper {
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 165px);
+        top: -30px;
+        width: 330px;
+        height: 35px;
+        background-image: url("../img/general/line_right.png");
+        background-size: 100% 100%;
+    }
+}
+
+.offer--lower {
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 165px);
+        bottom: -30px;
+        width: 330px;
+        height: 35px;
+        background-image: url("../img/general/line_left.png");
+        background-size: 100% 100%;
+    }
+}
+@media (min-width: $breakpoint-m) {
+    .offer{
+        font-size: 38px;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .offer{
+        font-size: 46px;
+    }
+    .offer--mob {
+        display: none;
+    }
+
+    .offer--web {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto 0;
+        height: 100px;
+
+    }
+}

@@ -1,0 +1,119 @@
+.wheel {
+    position: relative;
+    margin: auto;
+    width: 375px;
+    height: 375px;
+    display: block;
+    z-index: 10;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: calc(50% - 35px);
+        top: -5px;
+        width: 70px;
+        height: 100px;
+        background-image: url("../img/general/arrow.png");
+        background-size: 100% 100%;
+        z-index: 3;
+        animation-name: floater;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.wheel__sectors {
+    position: absolute;
+    background-size: cover;
+}
+
+.wheel__sectors--one {
+    background-image: url("../img/web/outer_circle.png");
+    width: 100%;
+    height: 100%;
+}
+
+.wheel__sectors--two {
+    background-image: url("..//img/web/text_in_circle.png");
+    width: 100%;
+    height: 100%;
+}
+
+.wheel__sectors--one {
+    animation-name: spinner;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.animation--1 {
+    animation: spinner-sector1 5s linear infinite;
+}
+
+.animation--2{
+    animation: spinner-sector2 6s linear 1;
+}
+.animation--3{
+    animation: spinner-sector3 6s linear 1;
+}
+
+
+.wheel__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+    height: 12%;
+    font-size: 26px;
+    font-family: "Kozuka Gothic Pr6N";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    left: 33%;
+    top: 44%;
+    z-index: 15;
+    background-color: #ff1789;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+
+    &:hover {
+            box-shadow: 0px 1px 40px 0.72px rgba(31, 28, 243, 1);
+        }
+
+}
+
+@media (min-width: $breakpoint-m) {
+    .wheel {
+        width: 60vh;
+        height: 60vh;
+
+        &::before {
+            top: -30px;
+            left: calc(41%);
+            top: -5px;
+            width: 18%;
+            height: 25%;
+        }
+    }
+
+    .wheel__button {
+        font-size: 32px;
+    }
+}
+
+
+@media (min-width: $breakpoint-xl) {
+    .wheel {
+        width: calc(100vh - 155px);
+        height: calc(100vh - 155px);
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .wheel__button {
+        font-size: 42px;
+    }
+}

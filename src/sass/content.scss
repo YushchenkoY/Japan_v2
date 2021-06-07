@@ -1,0 +1,66 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.content--mob {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content--web {
+    display: none;
+    z-index: 5;
+}
+
+.content__parts {
+    display: flex;
+    margin-bottom: 0;
+    z-index: 10;
+}
+
+.content__part--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.content__part--right {
+    position: relative;
+    height: calc(100vh - 155px);
+    width: 40vh;
+    margin: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50vh;
+        height: calc(100vh - 160px);
+        background-image: url("../img/web/girl_with_ball.gif");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .content--mob {
+        display: none;
+    }
+
+    .content--web {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+

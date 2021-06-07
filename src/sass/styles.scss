@@ -1,0 +1,91 @@
+@import '_variables.scss';
+@import 'header.scss';
+@import 'offer.scss';
+@import 'content.scss';
+@import 'wheel.scss';
+@import 'keyframes.scss';
+@import 'modal.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);    
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    min-width: 375px;
+    height: auto;
+    width: 100vw;
+    font-family: "Kozuka Gothic Pr6N", sans-serif;
+    font-stretch: ultra-condensed;
+
+}
+
+.page__container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 55px);
+    background-image: url("../img/mob/BG.png");
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background-image: url("../img/mob/smoke.png");
+        background-size: cover;
+        animation-name: smoke;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0%;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url("../img/mob/sparks.png");
+        background-size: cover;
+        animation-name: sparks;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+@media (min-width: $breakpoint-m) {
+    .page__container {
+        background-image: url("../img/web/BG.png");
+    }
+}
+
+@media (min-width: $breakpoint-l) {
+    .page__container {
+        
+        &::before {
+            background-image: url("../img/web/smoke.png");
+            height: 60%;
+        }
+
+        &::after {
+            background-image: url("../img/web/sparks.png");
+            height: 60%;
+        }
+    }
+}
+
+

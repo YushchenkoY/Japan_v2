@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Bons</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href=# class="header__logotype"></a>
+            <a href=# class="header__sign-in">アカウントにログイン</a>
+            <a href=# class="header__sign-up">登録</a>
+        </div>
+    </header>
+
+    <main class="page__container">
+        <div class="content content--mob">
+            <p class="offer offer--upper offer--mob">ウィールを回す</p>
+            <div class="wheel wheel--initial">
+                <button id='wheel__button' type="button" class="wheel__button btn"> 回転 </button>
+                <div class="wheel__sectors wheel__sectors--one"></div>
+                <div class="wheel__sectors wheel__sectors--two animation--1"></div>
+            </div>
+            <p class="offer offer--lower offer--mob">賞金を獲得</p>
+        </div>
+
+        <div class="content content--web">
+            <div class="offer offer--web ">
+                <p class="offer offer--upper">ウィールを回す</p>
+                <p class="offer offer--lower">賞金を獲得</p>
+            </div>
+            <div class="content__parts">
+                <div class="content__part--left">
+                    <div class="wheel wheel--initial">
+                        <button type="button" class="wheel__button"> 回転 </button>
+                        <div class="wheel__sectors wheel__sectors--one"></div>
+                        <div class="wheel__sectors wheel__sectors--two animation--1"></div>
+                    </div>
+                </div>
+                <div class="content__part--right">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal modal--first">
+        <div class="modal__content">
+            <div class="modal__stars5">
+                <img src="./img/general/pop-up/stars5.png">
+            </div>
+            <p class="modal__titel">
+                おめでとうございます！
+            </p>
+            <div class="modal__box">
+                <img src="./img/general/pop-up/box.png">
+            </div>
+            <div class="modal__text--wrapper">
+                <p class="modal__text modal__text--200">200％</p>
+                <p class="modal__text">のキャッシュボーナスを</p>
+                <p class="modal__text">獲得しました</p>
+            </div>
+            <button type="button" class="modal__btn">もう一度スピン</button>
+        </div>
+    </div>
+
+    <div class="modal modal--second">
+        <div class="modal__content ">
+            <p class="modal__titel">入手者</p>
+            <div class="modal__box">
+                <img src="./img/general/pop-up/stars3.png">
+            </div>
+            <div class="modal__text--wrapper">
+                <p class="modal__text modal__text--200">200％</p>
+                <p class="modal__text">のボーナス</p>
+                <p class="modal__text modal__text--plus">+</p>
+
+                <p class="modal__text modal__text--200">200回</p>
+                <p class="modal__text">のフリースピンを獲得できます！</p>
+            </div>
+            <a href=# class="modal__btn ">登録</a>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+
+    <!-- <script>
+        let firstModal = document.getElementsByClassName("modal--first");
+        let secondModal = document.getElementsByClassName("modal--second");
+        let wheel_btn = document.getElementsByClassName("wheel__button");
+        let modal_btn = document.getElementsByClassName("modal__btn");
+        let wheel_sectors = document.getElementsByClassName("wheel__sectors--two");
+    </script> -->
+
+
+</body>
+
+</html>
