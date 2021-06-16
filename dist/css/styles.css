@@ -213,10 +213,12 @@
   animation: spinner-sector1 5s linear infinite; }
 
 .animation--2 {
-  animation: spinner-sector2 6s linear 1; }
+  animation: spinner-sector2 5s linear 1;
+  animation-fill-mode: forwards; }
 
 .animation--3 {
-  animation: spinner-sector3 6s linear 1; }
+  animation: spinner-sector3 5s linear 1;
+  animation-fill-mode: forwards; }
 
 .wheel__button {
   display: flex;

@@ -31,7 +31,7 @@ class Circle {
       this.wheelSector[i].classList.remove("animation--1");
       this.wheelSector[i].classList.add("animation--2");
     }
-    setTimeout(this.firstModal.open.bind(this.firstModal), 5000);
+    setTimeout(this.firstModal.open.bind(this.firstModal), 4500);
   }
 
   onClickBtnFirstModal() {
@@ -40,7 +40,7 @@ class Circle {
       this.wheelSector[i].classList.remove("animation--2");
       this.wheelSector[i].classList.add("animation--3");
     }
-    setTimeout(this.secondModal.open.bind(this.secondModal), 5500);
+    setTimeout(this.secondModal.open.bind(this.secondModal), 4500);
   }
 
   onClickBtnSecondModal() {
